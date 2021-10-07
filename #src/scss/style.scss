@@ -1,0 +1,454 @@
+@use "sass:math";
+//<МИКСИНЫ>===============================================================================================
+@import "mixins";
+//</МИКСИНЫ>===============================================================================================
+
+//<ШРИФТЫ>===============================================================================================
+
+//<Подключаем шрифты>=======================================================================================
+//&display=swap&subset=cyrillic-ext
+@import "fonts";
+//</Подключаем шрифты>=======================================================================================
+
+//<Иконочные шрифты>==========================================================================================
+//@import "icons";
+//</Иконочные шрифты>==========================================================================================
+
+//<Шрифт по умолчанию>==========================================================================================
+$fontFamily: "";
+$fontSize: 14;
+//</Шрифт по умолчанию>==========================================================================================
+
+//</ШРИФТЫ>=======================================================================================================
+
+//<ПЕРЕМЕННЫЕ>==========================================================================================================
+$minWidth: 320px;
+$maxWidth: 1920;
+$maxWidthContainer: 1046;
+$md1: $maxWidthContainer + 12;
+$md2: 991.98;
+$md3: 767.98;
+$md4: 479.98;
+
+$mainColor: #252B42;
+$secondColor: #737373;
+$green: #0D5C63;
+$dark-blue:#252B42;
+
+//</ПЕРЕМЕННЫЕ>===========================================================================================================
+
+//<ОБНУЛЕНИЕ, ОБЩИЕ ПАРАМЕТРЫ>===============================================================================================
+@import "null";
+body {
+	background-color: #FAFAFA;
+	color: $mainColor;
+	&._lock {
+		overflow: hidden;
+	}
+}
+//</ОБНУЛЕНИЕ, ОБЩИЕ ПАРАМЕТРЫ>===============================================================================================
+
+//<ОБОЛОЧКА>===========================================================================================================
+.wrapper {
+	
+	min-height: 100%;
+	overflow: hidden;
+	display: flex;
+	flex-direction: column;
+	&._loaded {
+	}
+}
+//</ОБОЛОЧКА>===========================================================================================================
+
+//<ОСНОВНАЯ СЕТКА>===========================================================================================================
+._container {
+	max-width: $maxWidthContainer + px;
+	margin: 0 auto;
+	padding: 0 15px;
+	box-sizing: content-box;
+	@media (max-width: $md1 + px) {
+		max-width: 970px;
+	}
+	@media (max-width: $md2+px) {
+		max-width: 750px;
+	}
+	@media (max-width: $md3+px) {
+		max-width: none;
+		padding: 0 10px;
+	}
+}
+//</ОСНОВНАЯ СЕТКА>===========================================================================================================
+
+//<ПОДКЛЮЧЕНИЕ ФАЙЛОВ UI СТИЛЕЙ, ФОРМ И ГОТОВЫХ КЛАССОВ>====================================================================================================
+//@import "forms";
+//@import "ui";
+//</ПОДКЛЮЧЕНИЕ ФАЙЛОВ UI СТИЛЕЙ, ФОРМ И ГОТОВЫХ КЛАССОВ>====================================================================================================
+
+//<ПОДКЛЮЧЕНИЕ ФАЙЛОВ СТИЛЕЙ СТРАНИЦ И ЭЛЕМЕНТОВ>====================================================================================================
+//@import "datepicker";
+//@import "lightgallery";
+//@import "pagging";
+//@import "popup";
+@import "header";
+@import "footer";
+@import "home";
+//</ПОДКЛЮЧЕНИЕ ФАЙЛОВ СТИЛЕЙ СТРАНИЦ И ЭЛЕМЕНТОВ>====================================================================================================
+
+//<ОСНОВНОЙ БЛОК>====================================================================================================
+.page {
+	flex: 1 1 auto;
+}
+	// ._ibg
+	._ibg {
+		position: relative;
+	}
+	._ibg img {
+		position: absolute;
+		width: 100%;
+		height: 100%;
+		top: 0;
+		left: 0;
+		object-fit: cover;
+	}
+
+//===================================================================================================================================
+.page {
+	// .page__main-block
+	&__main-block {
+	}
+	// .page__services
+	&__services {
+	}
+	// .page__advantages
+	&__advantages {
+	}
+	// .page__practice
+	&__practice {
+	}
+	// .page__whoweare
+	&__whoweare {
+	}
+	// .page__clients
+	&__clients {
+	}
+	// .page__subscribe
+	&__subscribe {
+	}
+	// .page__getintouch
+	&__getintouch {
+	}
+	// .page__contactus
+	&__contactus {
+	}
+}
+.main-block {
+	position: relative;
+	
+	// .main-block__container
+	&__container {
+		
+	}
+	&__body{
+		position: relative;
+		z-index: 2;
+		max-width: 400px;
+		padding: 184px 0px 191px 0px;
+	}
+	// .main-block__title
+	&__title {
+		font-size: 58px;
+		line-height: 80px;
+		font-weight: 800;
+	}
+	// .main-block__text
+	&__text {
+		line-height: 30px;
+		font-size: 20px;
+		font-weight: 500;
+	}
+	// .main-block__buttons
+	&__buttons {
+		display: flex;
+		flex-wrap: wrap;
+	}
+	// .main-block__button
+	&__button {
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		text-align: center;
+		padding: 10px 36px 10px 36px;
+		margin-right: 10px;
+		font-size: 14px;
+		font-weight: 700;
+		line-height: 28px;		
+		min-height: 48px;
+		color: $green;
+		border-radius: 37px;
+		transition: all 0.4s ease 0s;
+		
+		
+		
+	}
+	// .main-block__orange
+	&__orange {
+		color: #FAFAFA;
+		background-color: #FF7B47		;
+		
+	}
+	&__orange:hover{
+		color:#FF7B47;
+		background-color: #fff;
+	}
+	// .main-block__border
+	&__border {
+		border: 1px solid $green;
+	}
+	&__border:hover{
+		color: #fff;
+		background-color: $green;
+	}
+	// .main-block__img
+	&__img {
+		position: absolute;
+		width: 100%;
+		height: 100%;
+		top: 0;
+		left: 0;
+		
+	}
+	@media (max-width: 1300px) {
+		&__img img {
+			object-position: right;
+		}
+	}
+	@media (max-width: 992px) {
+		&__img {
+			opacity: 0.5;
+		}
+	}
+}
+
+	// ._container
+._container {
+}
+
+
+.services {
+	// .services__container
+	&__container {
+	}
+	// .services__column
+	&__column {
+	}
+	// .services__item
+	&__item {
+	}
+}
+.item-service {
+	// .item-service_green
+	&_green {
+	}
+	// .item-service__item
+	&__item {
+	}
+	// .item-service__title
+	&__title {
+	}
+}
+.item-srevice {
+	// .item-srevice__text
+	&__text {
+	}
+}
+.advantages {
+	// .advantages__container
+	&__container {
+	}
+	// .advantages__header
+	&__header {
+	}
+	// .advantages__body
+	&__body {
+	}
+	// .advantages__column
+	&__column {
+	}
+	// .advantages__item
+	&__item {
+	}
+	// .advantages__value
+	&__value {
+	}
+	// .advantages__text
+	&__text {
+	}
+}
+.header-block {
+	// .header-block__title
+	&__title {
+		font-weight: 700;
+		font-size: 40px;
+		line-height: 57px;
+		letter-spacing: 0.2px;
+		color: $mainColor;
+	}
+	// .header-block__subtitle
+	&__subtitle {
+		font-weight: 500;
+		font-size: 14px;
+		line-height: 20px;
+		letter-spacing: 0.2px;
+		text-align: center;
+	}
+}
+.practice {
+	// .practice_title
+	&_title {
+	}
+	// .practice__container
+	&__container {
+	}
+	// .practice__header
+	&__header {
+	}
+	// .practice__body
+	&__body {
+	}
+	// .practice__column
+	&__column {
+	}
+	// .practice__subtitle
+	&__subtitle {
+	}
+	// .practice__img
+	&__img {
+	}
+}
+.whoweare {
+	// .whoweare__container
+	&__container {
+	}
+	// .whoweare__header
+	&__header {
+	}
+	// .whoweare__body
+	&__body {
+	}
+	// .whoweare__video
+	&__video {
+	}
+	// .whoweare__content
+	&__content {
+	}
+	// .whoweare__top
+	&__top {
+	}
+	// .whoweare__title
+	&__title {
+	}
+	// .whoweare__subtitle
+	&__subtitle {
+	}
+	// .whoweare__items
+	&__items {
+	}
+	// .whoweare__item
+	&__item {
+	}
+}
+.item-whoweare {
+	// .item-whoweare__img
+	&__img {
+	}
+	// .item-whoweare__body
+	&__body {
+	}
+	// .item-whoweare__title
+	&__title {
+	}
+}
+.itm-whoweare {
+	// .itm-whoweare__text
+	&__text {
+	}
+}
+.clients {
+	// .clients__container
+	&__container {
+	}
+	// .clients__items
+	&__items {
+	}
+}
+.client {
+	// .client__item
+	&__item {
+	}
+}
+.subscribe {
+	// .subscribe__container
+	&__container {
+	}
+	// .subscribe__body
+	&__body {
+	}
+	// .subscribe__title
+	&__title {
+	}
+	// .subscribe__form
+	&__form {
+	}
+	// .subscribe__input
+	&__input {
+	}
+	// .subscribe__button
+	&__button {
+	}
+}
+.getintouch {
+	// .getintouch__container
+	&__container {
+	}
+	// .getintouch__header
+	&__header {
+	}
+	// .getintouch__items
+	&__items {
+	}
+	// .getintouch__item
+	&__item {
+	}
+}
+.item-getintouch {
+	// .item-getintouch_active
+	&_active {
+	}
+	// .item-getintouch__icon
+	&__icon {
+	}
+	// .item-getintouch__email
+	&__email {
+	}
+	// .item-getintouch__title
+	&__title {
+	}
+	// .item-getintouch__button
+	&__button {
+	}
+}
+.contactus {
+	// .contactus__text
+	&__text {
+	}
+	// .contactus__title
+	&__title {
+	}
+	// .contactus__button
+	&__button {
+	}
+}
+.contactus-container {
+}
+
+//</ОСНОВНОЙ БЛОК>====================================================================================================
