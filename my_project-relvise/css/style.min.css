@@ -1,31 +1,3 @@
-@font-face {
-  font-family: "Gilroy-Bold";
-  font-display: swap;
-  src: url("../fonts/Gilroy-Bold.woff2") format("woff2"), url("../fonts/Gilroy-Bold.woff") format("woff");
-  font-weight: 400;
-  font-style: normal;
-}
-@font-face {
-  font-family: "Gilroy-Medium";
-  font-display: swap;
-  src: url("../fonts/Gilroy-Medium.woff2") format("woff2"), url("../fonts/Gilroy-Medium.woff") format("woff");
-  font-weight: 400;
-  font-style: normal;
-}
-@font-face {
-  font-family: "Gilroy-SemiBold";
-  font-display: swap;
-  src: url("../fonts/Gilroy-SemiBold.woff2") format("woff2"), url("../fonts/Gilroy-SemiBold.woff") format("woff");
-  font-weight: 400;
-  font-style: normal;
-}
-@font-face {
-  font-family: "Gilroy-Regular";
-  font-display: swap;
-  src: url("../fonts/Gilroy-Regular.woff2") format("woff2"), url("../fonts/Gilroy-Regular.woff") format("woff");
-  font-weight: 400;
-  font-style: normal;
-}
 * {
   padding: 0px;
   margin: 0px;
@@ -122,6 +94,7 @@ h6 {
 body {
   background-color: #FAFAFA;
   color: #252B42;
+  font-family: "Montserrat", sans-serif;
 }
 body._lock {
   overflow: hidden;
@@ -272,6 +245,11 @@ body._lock {
   object-fit: cover;
 }
 
+.page__services {
+  position: relative;
+  z-index: 2;
+  margin: -111px 0px 0px 0px;
+}
 .main-block {
   position: relative;
 }
@@ -290,6 +268,8 @@ body._lock {
   line-height: 30px;
   font-size: 20px;
   font-weight: 500;
+  padding: 35px 0px 35px 0px;
+  color: #737373;
 }
 .main-block__buttons {
   display: flex;
@@ -343,12 +323,114 @@ body._lock {
   }
 }
 
+.services {
+  position: relative;
+  margin-top: -100px;
+}
+@media (min-width: 670px) {
+  .services__body {
+    display: flex;
+    flex-wrap: wrap;
+  }
+}
+.services__column {
+  background-color: #fff;
+  margin: 0px 0px 30px 0px;
+  flex: 0 1 31%;
+}
+.services__column:not(:last-child) {
+  margin-right: 30px;
+}
+@media (max-width: 1046px) {
+  .services__column:not(:last-child) {
+    margin-right: calc(10px + 20 * ((100vw - 320px) / 726));
+  }
+}
+@media (max-width: 992px) {
+  .services__column {
+    flex: 0 1 50%;
+  }
+  .services__column:not(:last-child) {
+    margin: 0px 0px 30px 0px;
+  }
+  .services__column:last-child {
+    flex: 1 1 100%;
+  }
+}
+.services__item {
+  height: 100%;
+  padding: 35px;
+}
+
+.item-service {
+  padding: 35px 40px;
+}
+.item-service_green {
+  color: #fff;
+  background-color: #0D5C63;
+}
+.item-service__title {
+  font-size: 24px;
+  line-height: 32px;
+  font-weight: bold;
+  letter-spacing: 0.1px;
+  margin: 10px 0px 10px 0px;
+}
+
+.item-srevice__text {
+  font-size: 14px;
+  line-height: 20px;
+  letter-spacing: 0.2px;
+  font-weight: 500;
+}
+
+.advantages {
+  border-color: #FAFAFA;
+}
+.advantages__header {
+  margin-top: 80px;
+  text-align: center;
+}
+@media (max-width: 1046px) {
+  .advantages__header {
+    margin-top: calc(30px + 50 * ((100vw - 320px) / 726));
+  }
+}
+.advantages__body {
+  display: flex;
+}
+.advantages__column {
+  margin-top: 50px;
+  flex: 1 0 25%;
+  padding: 30px 40px;
+  text-align: center;
+}
+.advantages__item {
+  height: 45px;
+  align-self: center;
+}
+.advantages__value {
+  margin: 10px;
+  font-size: 40px;
+  line-height: 57px;
+  font-weight: 700;
+  letter-spacing: 0.2px;
+  min-width: 141px;
+}
+.advantages__text {
+  font-size: 16px;
+  line-height: 24px;
+  letter-spacing: 0.1px;
+  font-weight: 700;
+}
+
 .header-block__title {
   font-weight: 700;
   font-size: 40px;
   line-height: 57px;
   letter-spacing: 0.2px;
   color: #252B42;
+  margin-bottom: 10px;
 }
 .header-block__subtitle {
   font-weight: 500;

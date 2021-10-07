@@ -7,7 +7,7 @@
 
 //<Подключаем шрифты>=======================================================================================
 //&display=swap&subset=cyrillic-ext
-@import "fonts";
+//@import "fonts";
 //</Подключаем шрифты>=======================================================================================
 
 //<Иконочные шрифты>==========================================================================================
@@ -45,6 +45,7 @@ body {
 	&._lock {
 		overflow: hidden;
 	}
+	font-family: 'Montserrat', sans-serif;
 }
 //</ОБНУЛЕНИЕ, ОБЩИЕ ПАРАМЕТРЫ>===============================================================================================
 
@@ -113,11 +114,15 @@ body {
 
 //===================================================================================================================================
 .page {
+	
 	// .page__main-block
 	&__main-block {
 	}
 	// .page__services
 	&__services {
+		position: relative;
+		z-index: 2;
+		margin: -111px 0px 0px 0px;
 	}
 	// .page__advantages
 	&__advantages {
@@ -165,6 +170,8 @@ body {
 		line-height: 30px;
 		font-size: 20px;
 		font-weight: 500;
+		padding: 35px 0px 35px 0px;
+		color: $secondColor;
 	}
 	// .main-block__buttons
 	&__buttons {
@@ -235,53 +242,126 @@ body {
 
 
 .services {
+	position: relative;
+	margin-top: -100px;
 	// .services__container
 	&__container {
+		
+		
+	}
+	&__body{
+		@media (min-width: 670px) {
+			display: flex;
+			flex-wrap: wrap;
+			
+		}
+
 	}
 	// .services__column
 	&__column {
+		background-color: #fff;
+		margin: 0px 0px 30px 0px;
+		
+		flex: 0 1 31%;
+		
+		
+	}
+	&__column:not(:last-child){
+		//margin: 0px 30px 0px 0px;
+		@include adaptiv-value ('margin-right', 30, 10, 1 )
+	}
+	@media (max-width: 992px) {
+		&__column{
+			flex: 0 1 50%;
+		}
+		&__column:not(:last-child) {
+			margin: 0px 0px 30px 0px;
+		}
+		&__column:last-child {
+			flex: 1 1 100%;
+		}
+		
 	}
 	// .services__item
 	&__item {
+		height: 100%;
+		padding: 35px;
 	}
 }
 .item-service {
+	//margin: 0px 30px 0px 0px;
+	padding: 35px 40px;
+	
 	// .item-service_green
 	&_green {
+		color: #fff;
+		background-color: $green;
 	}
 	// .item-service__item
 	&__item {
 	}
 	// .item-service__title
 	&__title {
+		font-size: 24px;
+		line-height: 32px;
+		font-weight: bold;
+		letter-spacing: 0.1px;
+		margin: 10px 0px 10px 0px;
 	}
 }
 .item-srevice {
 	// .item-srevice__text
 	&__text {
+		font-size: 14px;
+		line-height: 20px;
+		letter-spacing: 0.2px;
+		font-weight: 500;
 	}
 }
 .advantages {
+	border-color: #FAFAFA;
 	// .advantages__container
 	&__container {
 	}
 	// .advantages__header
 	&__header {
+		@include adaptiv-value ('margin-top', 80, 30, 1);
+		
+		text-align:center;
 	}
 	// .advantages__body
 	&__body {
+		display: flex;
+		
 	}
 	// .advantages__column
 	&__column {
+		margin-top: 50px;
+		flex: 1 0 25%;
+		padding:30px 40px ;
+		text-align: center;
 	}
 	// .advantages__item
 	&__item {
+		height: 45px;
+		align-self: center;
+		
 	}
 	// .advantages__value
 	&__value {
+		margin: 10px;
+		font-size: 40px;
+		line-height: 57px;
+		font-weight: 700;
+		letter-spacing: 0.2px;
+		min-width: 141px;
 	}
 	// .advantages__text
 	&__text {
+		font-size: 16px;
+		line-height: 24px;
+		letter-spacing: 0.1px;
+		font-weight: 700;
 	}
 }
 .header-block {
@@ -292,6 +372,7 @@ body {
 		line-height: 57px;
 		letter-spacing: 0.2px;
 		color: $mainColor;
+		margin-bottom: 10px;
 	}
 	// .header-block__subtitle
 	&__subtitle {
