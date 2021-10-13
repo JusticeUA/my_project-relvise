@@ -1,4 +1,124 @@
 footer {
+    
+
+    .page {
+		// .page__footer
+		&__footer {
+		}
+}
+.footer {
+		// .footer__top
+		&__top {
+            background-color:#17213C;
+            color: #FFFFFF;
+            padding: 50px 0px;
+
+		}
+		// .footer__container
+		&__container {
+		}
+		// .footer__row
+		&__row {
+            display: flex;
+            flex-direction: row;
+            justify-content: space-around;
+		}
+		// .footer__column
+		&__column {
+		}
+		// .footer__label
+		&__label {
+            font-size: 16px;
+            line-height: 24px;
+            font-weight: 700;
+            letter-spacing: 0.1px;
+            margin-bottom: 10px;
+		}
+      
+		// .footer__menu
+		&__menu {
+		}
+		// .footer__contacts
+		&__contacts {
+            display: flex;
+            flex-direction: column;
+            
+		}
+		// .footer__bottom
+		&__bottom {
+		}
+		// .footer__copy
+		&__copy {
+		}
+		// .footer__social
+		&__social {
+		}
+}
+
+		// ._container
+		&_container {
+		}
+
+.menu-footer {
+		// .menu-footer__item
+		&__item {
+		}
+		// .menu-footer__link
+		&__link {
+            font-style: 14px;
+            font-weight: 600;
+            line-height: 24px;
+            letter-spacing: 0.2px;
+            color: #FFFFFF;
+            margin-top: 10px;
+		}
+        &__link:hover{
+            
+            text-decoration: underline;
+        }
+       
+}
+.contacts-footer {
+		// .contacts-footer__item
+		&__item {
+            padding: 0px 0px 0px 34px;
+	line-height: 142%;
+	display: flex;
+	align-items: center;
+	color: #ffffff;
+	min-height: 30px;
+            
+            &:hover {
+                text-decoration: underline;
+            }
+            &:not(:last-child) {
+                margin: 0px 0px 12px 0px;
+            }
+			// .contacts-footer__item_phone
+			&_phone {
+                background: url(../img/footer/icons/01.svg) 0 0 no-repeat;
+                
+			}
+			
+			// .contacts-footer__item_map
+			&_map {
+                background: url(../img/footer/icons/02.svg) 0 0 no-repeat;
+			}
+			// .contacts-footer__item_email
+			&_email {
+                background: url(../img/footer/icons/03.svg) 0 0 no-repeat;
+			}
+		}
+}
+.social {
+		// .social__link
+		&__link {
+		}
+		// .social__icon
+		&__icon {
+		}
+}
+
 }
 //====================================================================================================
 
