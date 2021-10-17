@@ -374,6 +374,12 @@ footer .social__link {
   display: flex;
   flex-wrap: wrap;
 }
+@media (max-width: 400px) {
+  .main-block__button {
+    flex: 1 1 100%;
+    margin-bottom: 10px;
+  }
+}
 .main-block__button {
   display: flex;
   align-items: center;
@@ -640,7 +646,7 @@ footer .social__link {
   line-height: 20px;
   letter-spacing: 0.2px;
   color: #737373;
-  min-height: 80px;
+  height: 80px;
 }
 .practice__img {
   display: block;
@@ -659,6 +665,9 @@ footer .social__link {
   padding: 30px;
 }
 
+.whoweare__container {
+  background-color: #ffffff;
+}
 .whoweare__header {
   margin-top: 100px;
   margin-bottom: 100px;
@@ -980,7 +989,6 @@ footer .social__link {
   align-items: center;
   justify-content: center;
   text-align: center;
-  max-height: 58px;
   transition: background-color 0.3s ease 0s;
 }
 .contactus__button:hover {
@@ -992,4 +1000,15 @@ footer .social__link {
   flex-direction: row;
   justify-content: space-between;
   padding: 42px 17px 42px 15px;
+}
+
+@media (max-width: 680px) {
+  .contactus-container {
+    flex-wrap: wrap;
+  }
+
+  .contactus__button {
+    margin: 10px 0px 0px 0px;
+    flex: 1 1 100%;
+  }
 }

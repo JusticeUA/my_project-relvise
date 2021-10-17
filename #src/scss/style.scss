@@ -181,6 +181,12 @@ body {
 		display: flex;
 		flex-wrap: wrap;
 	}
+	@media (max-width:400px) {
+		&__button{
+			flex: 1 1 100%;
+			margin-bottom: 10px;
+		}
+	}
 	// .main-block__button
 	&__button {
 		display: flex;
@@ -195,10 +201,8 @@ body {
 		min-height: 48px;
 		color: $green;
 		border-radius: 37px;
-		transition: all 0.4s ease 0s;
-		
-		
-		
+		transition: all 0.4s ease 0s;	
+				
 	}
 	// .main-block__orange
 	&__orange {
@@ -486,7 +490,7 @@ body {
 		letter-spacing: 0.2px;
 		//margin: 15px 30px 30px 30px;
 		color: $secondColor;
-		min-height: 80px;
+		height: 80px;
 	}
 	// .practice__img
 	&__img {
@@ -512,6 +516,7 @@ body {
 .whoweare {
 	// .whoweare__container
 	&__container {
+		background-color: #ffffff;
 	}
 	// .whoweare__header
 	&__header {
@@ -871,7 +876,7 @@ body {
 		align-items: center;
 		justify-content: center;
 		text-align: center;
-		max-height: 58px;
+		
 		transition: background-color 0.3s ease 0s;
 
 	}
@@ -885,6 +890,15 @@ body {
 	justify-content: space-between;
 	padding: 42px 17px 42px 15px;
 
+}
+@media (max-width:680px ) {
+	.contactus-container {
+		flex-wrap: wrap;
+	}
+	.contactus__button {
+		margin: 10px 0px 0px 0px;
+		flex: 1 1 100%;
+	}
 }
 
 
